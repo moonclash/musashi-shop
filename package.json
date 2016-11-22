@@ -1,0 +1,22 @@
+{
+  "name": "musashi-shop",
+  "version": "1.0.0",
+  "description": "Fictitious web site for University Of West London",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"hello world\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/embrah/musashi-shop.git"
+  },
+  "keywords": [
+    "musashi"
+  ],
+  "author": "Emil Mladenov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/embrah/musashi-shop/issues"
+  },
+  "homepage": "https://github.com/embrah/musashi-shop#readme"
+}
