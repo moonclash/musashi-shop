@@ -88,18 +88,18 @@
 //scalable, proportionate headings
 
 @mixin heading($h) {
-  $size: $default-size;
+  $size: $base-font;
   
-  @if ($h == h1) {
-    $size: $default-size * 4;
+  @if ($h == 'h1') {
+    $size: $base-font * 4;
   }
 
-  @if ($h == h2) {
-    $size: $default-size * 3;
+  @if ($h == 'h2') {
+    $size: $base-font * 3;
   }
 
-  @if ($h == h3) {
-    $size: $default-size * 2.2;
+  @if ($h == 'h3') {
+    $size: $base-font * 2.2;
   }
 
   font-size: $size;

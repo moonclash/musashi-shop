@@ -7,6 +7,8 @@
  */
 /* Document
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Domine|PT+Serif|Poppins|Questrial");
+@import url("https://fonts.googleapis.com/css?family=Domine|PT+Serif|Poppins|Questrial");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -401,3 +403,35 @@ template {
  */
 [hidden] {
   display: none; }
+
+html {
+  font-size: 10px; }
+
+body {
+  font-family: "Poppins";
+  font-size: 1.7rem; }
+
+h1, h2, h3 {
+  font-family: "PT Serif"; }
+
+a, button {
+  font-family: "Questrial"; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+h1 {
+  font-size: 40px;
+  line-height: 44px; }
+
+h2 {
+  font-size: 30px;
+  line-height: 33px; }
+
+h3 {
+  font-size: 22px;
+  line-height: 24.2px; }
+
+p {
+  line-height: 1.4; }

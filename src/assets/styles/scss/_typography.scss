@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'mixins';
+
+html {
+  font-size: $base-font;
+}
+
+body {
+  font-family: $body-font;
+  font-size: $body-font-size;
+}
+
+h1,h2,h3 {
+  font-family: $headings-font;
+}
+
+a,button {
+  font-family: $links-font;
+}
+
+a {
+  color: $black-main;
+  text-decoration: none;
+}
+
+h1 {
+  @include heading('h1');
+}
+
+h2 {
+  @include heading('h2'); 
+}
+
+h3 {
+  @include heading('h3');
+}
+
+p {
+  line-height: 1.4;
+}
+
+
+

@@ -1,11 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Domine|PT+Serif|Poppins|Questrial');
+
 //Sizings
 
-$font-size-large: 6rem;
-$font-size-medium: 4rem;
-$font-size-small: 3.5rem;
-$font-size-default: 1.8rem;
+$base-font: 10px;
+$body-font-size: 1.7rem;
 
 //animation timings
 
 $cubic-slow-start: .9,.8,.6,.2;
 $cubic-fast-start: .2,.1,.4,.7;
+
+//fonts setup
+
+$headings-font: 'PT Serif';
+$body-font: 'Poppins';
+$links-font: 'Questrial';
+
+//colours
+
+$black-main: #000;
