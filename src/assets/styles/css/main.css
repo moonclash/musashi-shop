@@ -405,19 +405,25 @@ template {
 [hidden] {
   display: none; }
 
+.musashi-story .story-row, .supplier .clients-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap; }
+
 ul, .philosophy .principles-row, .services .services-row {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap; }
 
-.hero {
+.hero, .supplier .clients-row .client {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap; }
 
-.hero {
+.hero, .supplier .clients-row .client {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
@@ -461,19 +467,25 @@ h3 {
 p {
   line-height: 1.4; }
 
+.musashi-story .story-row, .supplier .clients-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap; }
+
 ul, .philosophy .principles-row, .services .services-row {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap; }
 
-.hero {
+.hero, .supplier .clients-row .client {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap; }
 
-.hero {
+.hero, .supplier .clients-row .client {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
@@ -490,6 +502,15 @@ nav {
     background-position: center bottom; }
   to {
     background-position: center top; } }
+
+.home-carousel div a, .contact-us a {
+  background: #C3272B;
+  color: #FFF;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 10px 35px;
+  font-weight: 800;
+  border-radius: 5px; }
 
 html.carousel-container, body.carousel-container, .home-carousel {
   height: 100%;
@@ -525,14 +546,6 @@ ul {
   .home-carousel div h1 {
     padding: 200px;
     font-size: 4.9rem; }
-  .home-carousel div a {
-    background: #C3272B;
-    color: #FFF;
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 10px 35px;
-    font-weight: 800;
-    border-radius: 5px; }
 
 nav {
   background: #181B26;
@@ -554,7 +567,7 @@ nav {
 .philosophy {
   padding: 20px 0;
   text-align: center;
-  background: url(../../images/musashi-standing.png) no-repeat right center/500px; }
+  background: url(../../images/musashi-standing.png) no-repeat 900px center/500px; }
   .philosophy .principles-row {
     padding: 50px 0;
     -ms-flex-pack: justify;
@@ -579,7 +592,8 @@ nav {
   padding: 100px 0;
   background: url("../../images/japan-flag.jpg") no-repeat center top/cover;
   background-position: center bottom;
-  animation: 25s bg-slide-up infinite alternate linear;
+  background-attachment: fixed;
+  animation: 45s bg-slide-up infinite alternate linear;
   text-align: center; }
   .services .services-row {
     padding: 80px 0;
@@ -595,3 +609,67 @@ nav {
     background-image: url(../../images/poetry.jpg); }
   .services .literature {
     background-image: url(../../images/books.jpg); }
+
+.musashi-story {
+  text-align: center;
+  padding: 100px 15px; }
+  .musashi-story .story-row {
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .musashi-story .story-text, .musashi-story .musashi-picture {
+    -ms-flex: 1;
+    flex: 1; }
+  .musashi-story .story-text {
+    padding: 50px 0;
+    text-align: left;
+    height: 200px;
+    overflow-y: scroll; }
+    .musashi-story .story-text::-webkit-scrollbar {
+      width: 0; }
+
+.supplier {
+  text-align: center;
+  background: url("../../images/japan-door.jpg") no-repeat center top/cover;
+  padding: 100px 0;
+  color: #FFF; }
+  .supplier .clients-row {
+    text-align: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .supplier .clients-row .client {
+      -ms-flex: 1;
+      flex: 1;
+      margin: 5px; }
+      .supplier .clients-row .client .image-holder {
+        background: url("../../images/kill-bill.jpg") no-repeat center top/cover;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px; }
+        .supplier .clients-row .client .image-holder.samurai {
+          background-image: url(../../images/last-samurai.jpg); }
+        .supplier .clients-row .client .image-holder.battle-royale {
+          background-image: url(../../images/battle-royale.jpg); }
+        .supplier .clients-row .client .image-holder.geisha {
+          background-image: url(../../images/geisha.jpg); }
+
+.contact-us {
+  text-align: center;
+  padding: 80px 0; }
+  .contact-us p {
+    max-width: 400px;
+    margin: 0 auto; }
+  .contact-us a {
+    margin: 20px 0;
+    display: inline-block; }
+
+footer {
+  background: #212121;
+  color: #FFF;
+  text-align: center;
+  padding: 50px 0; }
+  footer p {
+    margin: 0; }
+  footer .social-media {
+    font-size: 1.5em; }
+    footer .social-media i {
+      padding: 0 15px; }

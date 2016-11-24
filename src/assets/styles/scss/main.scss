@@ -11,6 +11,16 @@
   }
 }
 
+%musashi-link {
+  background: $orange-500;
+  color: $white-500;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 10px 35px;
+  font-weight: 800;
+  border-radius: 5px;
+}
+
 html.carousel-container,body.carousel-container,.home-carousel {
   height: 100%;
   overflow: hidden;;
@@ -59,13 +69,7 @@ ul {
     }
 
     a {
-      background: $orange-500;
-      color: $white-500;
-      font-size: 2rem;
-      text-transform: uppercase;
-      padding: 10px 35px;
-      font-weight: 800;
-      border-radius: 5px;
+      @extend %musashi-link;
     }
   }
 }
@@ -99,7 +103,7 @@ nav {
 .philosophy {
   padding: 20px 0;
   text-align: center;
-  background: url(../../images/musashi-standing.png) no-repeat right center / 500px;
+  background: url(../../images/musashi-standing.png) no-repeat 900px center / 500px;
 
   .principles-row {
     padding: 50px 0;
@@ -136,7 +140,8 @@ nav {
   padding: 100px 0;
   @include backgroundImg('../../images/japan-flag.jpg');
   background-position: center bottom;
-  animation: 25s bg-slide-up infinite alternate linear;
+  background-attachment: fixed;
+  animation: 45s bg-slide-up infinite alternate linear;
   text-align: center;
 
   .services-row {
@@ -164,3 +169,92 @@ nav {
   }
 }
 
+.musashi-story {
+  text-align: center;
+  padding: 100px 15px;
+
+  .story-row {
+    @extend %flex-row-nowrap;
+    justify-content: center;
+  }
+  .story-text,.musashi-picture {
+    flex: 1;
+  }
+
+  .story-text {
+    padding: 50px 0;
+    text-align: left;
+    height: 200px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+}
+
+.supplier {
+    text-align: center;
+    @include backgroundImg('../../images/japan-door.jpg');
+    padding: 100px 0;
+    color: $white-500;
+  .clients-row {
+    @extend %flex-row-nowrap;
+    text-align: center;;
+    justify-content: space-around;
+    .client {
+      flex: 1;
+      @extend %flex-col-center;
+      margin: 5px;
+      .image-holder {
+        @include backgroundImg('../../images/kill-bill.jpg');
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        &.samurai {
+          background-image: url(../../images/last-samurai.jpg);
+        }
+        &.battle-royale {
+          background-image: url(../../images/battle-royale.jpg);
+        }
+        &.geisha {
+          background-image: url(../../images/geisha.jpg);
+        }
+      }
+    }
+  }
+}
+
+.contact-us {
+  text-align: center;
+  padding: 80px 0;
+
+  p {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  a {
+    @extend %musashi-link;
+    margin: 20px 0;
+    display: inline-block;
+  }
+}
+
+footer {
+  background: $black-400;
+  color: $white-500;
+  text-align: center;
+  padding: 50px 0;
+  p {
+    margin: 0;
+  }
+  .social-media {
+    font-size: 1.5em;
+
+    i {
+      padding: 0 15px;
+    }
+  }
+}
