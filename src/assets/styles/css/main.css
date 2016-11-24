@@ -522,8 +522,29 @@ ul {
   list-style: none;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media all and (max-width: 600px) {
+    ul {
+      -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+      -ms-flex-align: center;
+      align-items: center; } }
   ul li {
     padding: 10px 15px; }
+    ul li a {
+      transition: 300ms color ease; }
+      ul li a:hover {
+        color: #C3272B; }
+
+.nav-toggle {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  display: none; }
+  @media all and (max-width: 600px) {
+    .nav-toggle {
+      display: inline-block; } }
+
+.toggle-nav {
+  transform: translateY(0); }
 
 .container {
   max-width: 1200px;
@@ -550,13 +571,18 @@ ul {
 nav {
   background: #181B26;
   text-transform: uppercase;
-  padding: 15px 0; }
+  padding: 15px 0;
+  z-index: 1;
+  transition: 300ms transform ease; }
+  @media all and (max-width: 600px) {
+    nav {
+      transform: translateY(-78%); } }
   nav a {
     color: #FFF;
     font-weight: 800; }
 
 .hero {
-  padding: 400px 0;
+  height: 100vh;
   background: url("../../images/sakura-petals.jpg") no-repeat center top/cover;
   text-align: center;
   color: #FFF; }
@@ -568,16 +594,26 @@ nav {
   padding: 20px 0;
   text-align: center;
   background: url(../../images/musashi-standing.png) no-repeat 900px center/500px; }
+  .philosophy h1 {
+    color: #C3272B; }
   .philosophy .principles-row {
     padding: 50px 0;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+    @media all and (max-width: 600px) {
+      .philosophy .principles-row {
+        -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+        -ms-flex-align: center;
+        align-items: center; } }
   .philosophy .principle {
     -ms-flex: 1;
     flex: 1;
     max-width: 30%;
     text-align: center; }
     .philosophy .principle p {
+      color: #C3272B;
+      font-weight: 600;
       transition: 400ms all ease-in-out;
       transform: translateY(100%);
       opacity: 0; }
@@ -595,6 +631,12 @@ nav {
   background-attachment: fixed;
   animation: 45s bg-slide-up infinite alternate linear;
   text-align: center; }
+  @media all and (max-width: 600px) {
+    .services {
+      padding: 50px 0; }
+      .services .services-row {
+        -ms-flex-flow: column wrap;
+        flex-flow: column wrap; } }
   .services .services-row {
     padding: 80px 0;
     -ms-flex-pack: distribute;
@@ -613,9 +655,15 @@ nav {
 .musashi-story {
   text-align: center;
   padding: 100px 15px; }
+  .musashi-story h1 {
+    color: #C3272B; }
   .musashi-story .story-row {
     -ms-flex-pack: center;
     justify-content: center; }
+    @media all and (max-width: 600px) {
+      .musashi-story .story-row {
+        -ms-flex-flow: column wrap;
+        flex-flow: column wrap; } }
   .musashi-story .story-text, .musashi-story .musashi-picture {
     -ms-flex: 1;
     flex: 1; }
@@ -636,6 +684,10 @@ nav {
     text-align: center;
     -ms-flex-pack: distribute;
     justify-content: space-around; }
+    @media all and (max-width: 900px) {
+      .supplier .clients-row {
+        -ms-flex-flow: column wrap;
+        flex-flow: column wrap; } }
     .supplier .clients-row .client {
       -ms-flex: 1;
       flex: 1;

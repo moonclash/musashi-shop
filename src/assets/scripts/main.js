@@ -16,4 +16,8 @@ $(document).ready(function(){
     $(this).css('background-position',samuraiParallax + 'px,center');
    console.log(samuraiParallax);
   });
+
+  $('.nav-toggle').on('click',function(){
+    $('nav').toggleClass('toggle-nav');
+  })
 });

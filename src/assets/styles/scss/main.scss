@@ -33,9 +33,33 @@ ul {
   list-style: none;
   @extend %flex-row-wrap;
   justify-content: center;
+  @media all and (max-width: 600px) {
+    flex-flow: column wrap;
+    align-items: center;
+  }
   li {
     padding: 10px 15px;
+
+    a {
+      transition: 300ms color ease;
+      &:hover {
+        color: $orange-500;
+      }
+    }
   }
+}
+
+.nav-toggle {
+  align-self: flex-end;
+  display: none;
+
+  @media all and (max-width: 600px) {
+    display: inline-block;
+  } 
+}
+
+.toggle-nav {
+  transform: translateY(0);
 }
 
 .container {
@@ -74,13 +98,17 @@ ul {
   }
 }
 
-
-
 nav {
   background: $black-300;
   text-transform: uppercase;
   padding: 15px 0;
   @extend %fixed-stretch;
+  z-index: 1;
+  transition: 300ms transform ease;
+  @media all and(max-width: 600px) {
+    transform: translateY(-78%);
+
+  }
   a {
     color: $white-500;
     font-weight: 800;
@@ -88,7 +116,7 @@ nav {
 }
 
 .hero {
-  padding: 400px 0;
+  height: 100vh;
   @extend %flex-col-center;
   @include backgroundImg('../../images/sakura-petals.jpg');
   text-align: center;
@@ -104,11 +132,17 @@ nav {
   padding: 20px 0;
   text-align: center;
   background: url(../../images/musashi-standing.png) no-repeat 900px center / 500px;
-
+  h1 {
+    color: $orange-500;
+  }
   .principles-row {
     padding: 50px 0;
     @extend %flex-row-wrap;
     justify-content: space-between;
+    @media all and (max-width: 600px) {
+      flex-flow: column wrap;
+      align-items: center;
+    }
   }
 
   .principle {
@@ -116,6 +150,8 @@ nav {
     max-width: 30%;
     text-align: center;
     p {
+      color: $orange-500;
+      font-weight: 600;
       transition: 400ms all ease-in-out;
       transform: translateY(100%);
       opacity: 0;
@@ -144,10 +180,19 @@ nav {
   animation: 45s bg-slide-up infinite alternate linear;
   text-align: center;
 
+  @media all and(max-width: 600px) {
+      padding: 50px 0;
+      .services-row {
+        flex-flow: column wrap;
+      }
+      
+    }
+
   .services-row {
     padding: 80px 0;
     @extend %flex-row-wrap;
     justify-content: space-around;
+
   }
 
   .service {
@@ -172,15 +217,21 @@ nav {
 .musashi-story {
   text-align: center;
   padding: 100px 15px;
+  h1 {
+    color: $orange-500;
+  }
 
   .story-row {
     @extend %flex-row-nowrap;
     justify-content: center;
+    @media all and(max-width: 600px) {
+      flex-flow: column wrap;
+    }
   }
   .story-text,.musashi-picture {
     flex: 1;
   }
-
+    
   .story-text {
     padding: 50px 0;
     text-align: left;
@@ -203,6 +254,9 @@ nav {
     @extend %flex-row-nowrap;
     text-align: center;;
     justify-content: space-around;
+    @media all and (max-width:900px) {
+      flex-flow: column wrap;
+    }
     .client {
       flex: 1;
       @extend %flex-col-center;
