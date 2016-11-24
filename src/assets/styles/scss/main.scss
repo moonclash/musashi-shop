@@ -1,2 +1,166 @@
 @import 'normalize';
 @import 'typography';
+@import 'mixins';
+
+@keyframes bg-slide-up {
+  from {
+    background-position: center bottom;
+  }
+  to {
+    background-position: center top;
+  }
+}
+
+html.carousel-container,body.carousel-container,.home-carousel {
+  height: 100%;
+  overflow: hidden;;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @extend %flex-row-wrap;
+  justify-content: center;
+  li {
+    padding: 10px 15px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.home-carousel {
+  div {
+    height: 100%;
+    text-align: center;
+    @include backgroundImg('../../images/samurai-white.jpg');
+    color: $black-500;
+    &:nth-child(2) {
+      background-image: url(../../images/samurai-red.jpg);
+      color: $white-500;
+    }
+
+    &:nth-child(3) {
+      background-image: url(../../images/samurai-grey.jpg);
+      color: $white-500;
+    }
+
+    &:nth-child(4) {
+      background-image: url(../../images/samurai-fight.jpg);
+      color: $white-500;
+    }
+
+    h1 {
+      padding: 200px;
+      font-size: 4.9rem;
+    }
+
+    a {
+      background: $orange-500;
+      color: $white-500;
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 10px 35px;
+      font-weight: 800;
+      border-radius: 5px;
+    }
+  }
+}
+
+
+
+nav {
+  background: $black-300;
+  text-transform: uppercase;
+  padding: 15px 0;
+  @extend %fixed-stretch;
+  a {
+    color: $white-500;
+    font-weight: 800;
+  }
+}
+
+.hero {
+  padding: 400px 0;
+  @extend %flex-col-center;
+  @include backgroundImg('../../images/sakura-petals.jpg');
+  text-align: center;
+  color: $white-500;
+
+  p {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.philosophy {
+  padding: 20px 0;
+  text-align: center;
+  background: url(../../images/musashi-standing.png) no-repeat right center / 500px;
+
+  .principles-row {
+    padding: 50px 0;
+    @extend %flex-row-wrap;
+    justify-content: space-between;
+  }
+
+  .principle {
+    flex: 1;
+    max-width: 30%;
+    text-align: center;
+    p {
+      transition: 400ms all ease-in-out;
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    &:hover {
+      p {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    img {
+      width: 50%;
+      border-radius: 50%;
+    }
+
+  }
+}
+
+.services {
+  padding: 100px 0;
+  @include backgroundImg('../../images/japan-flag.jpg');
+  background-position: center bottom;
+  animation: 25s bg-slide-up infinite alternate linear;
+  text-align: center;
+
+  .services-row {
+    padding: 80px 0;
+    @extend %flex-row-wrap;
+    justify-content: space-around;
+  }
+
+  .service {
+    @include backgroundImg('../../images/katana.jpg');
+    color: $white-500;
+    padding: 100px;
+  }
+
+  .artwork {
+    background-image: url(../../images/artwork.jpg);
+  }
+
+  .poetry {
+    background-image: url(../../images/poetry.jpg);
+  }
+
+  .literature {
+    background-image: url(../../images/books.jpg);
+  }
+}
+

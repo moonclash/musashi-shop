@@ -9,6 +9,7 @@
    ========================================================================== */
 @import url("https://fonts.googleapis.com/css?family=Domine|PT+Serif|Poppins|Questrial");
 @import url("https://fonts.googleapis.com/css?family=Domine|PT+Serif|Poppins|Questrial");
+@import url("https://fonts.googleapis.com/css?family=Domine|PT+Serif|Poppins|Questrial");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -404,6 +405,30 @@ template {
 [hidden] {
   display: none; }
 
+ul, .philosophy .principles-row, .services .services-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+
+.hero {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap; }
+
+.hero {
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+
 html {
   font-size: 10px; }
 
@@ -418,7 +443,7 @@ a, button {
   font-family: "Questrial"; }
 
 a {
-  color: #000;
+  color: #212121;
   text-decoration: none; }
 
 h1 {
@@ -435,3 +460,138 @@ h3 {
 
 p {
   line-height: 1.4; }
+
+ul, .philosophy .principles-row, .services .services-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+
+.hero {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap; }
+
+.hero {
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+@keyframes bg-slide-up {
+  from {
+    background-position: center bottom; }
+  to {
+    background-position: center top; } }
+
+html.carousel-container, body.carousel-container, .home-carousel {
+  height: 100%;
+  overflow: hidden; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  ul li {
+    padding: 10px 15px; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.home-carousel div {
+  height: 100%;
+  text-align: center;
+  background: url("../../images/samurai-white.jpg") no-repeat center top/cover;
+  color: #000; }
+  .home-carousel div:nth-child(2) {
+    background-image: url(../../images/samurai-red.jpg);
+    color: #FFF; }
+  .home-carousel div:nth-child(3) {
+    background-image: url(../../images/samurai-grey.jpg);
+    color: #FFF; }
+  .home-carousel div:nth-child(4) {
+    background-image: url(../../images/samurai-fight.jpg);
+    color: #FFF; }
+  .home-carousel div h1 {
+    padding: 200px;
+    font-size: 4.9rem; }
+  .home-carousel div a {
+    background: #C3272B;
+    color: #FFF;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 10px 35px;
+    font-weight: 800;
+    border-radius: 5px; }
+
+nav {
+  background: #181B26;
+  text-transform: uppercase;
+  padding: 15px 0; }
+  nav a {
+    color: #FFF;
+    font-weight: 800; }
+
+.hero {
+  padding: 400px 0;
+  background: url("../../images/sakura-petals.jpg") no-repeat center top/cover;
+  text-align: center;
+  color: #FFF; }
+  .hero p {
+    max-width: 400px;
+    margin: 0 auto; }
+
+.philosophy {
+  padding: 20px 0;
+  text-align: center;
+  background: url(../../images/musashi-standing.png) no-repeat right center/500px; }
+  .philosophy .principles-row {
+    padding: 50px 0;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .philosophy .principle {
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 30%;
+    text-align: center; }
+    .philosophy .principle p {
+      transition: 400ms all ease-in-out;
+      transform: translateY(100%);
+      opacity: 0; }
+    .philosophy .principle:hover p {
+      opacity: 1;
+      transform: translateY(0); }
+    .philosophy .principle img {
+      width: 50%;
+      border-radius: 50%; }
+
+.services {
+  padding: 100px 0;
+  background: url("../../images/japan-flag.jpg") no-repeat center top/cover;
+  background-position: center bottom;
+  animation: 25s bg-slide-up infinite alternate linear;
+  text-align: center; }
+  .services .services-row {
+    padding: 80px 0;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .services .service {
+    background: url("../../images/katana.jpg") no-repeat center top/cover;
+    color: #FFF;
+    padding: 100px; }
+  .services .artwork {
+    background-image: url(../../images/artwork.jpg); }
+  .services .poetry {
+    background-image: url(../../images/poetry.jpg); }
+  .services .literature {
+    background-image: url(../../images/books.jpg); }
