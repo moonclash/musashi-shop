@@ -411,19 +411,19 @@ template {
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap; }
 
-ul, .philosophy .principles-row, .services .services-row {
+ul, .philosophy .principles-row, .services .services-row, .products {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap; }
 
-.hero, .supplier .clients-row .client {
+.hero, .supplier .clients-row .client, .contact-form form {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap; }
 
-.hero, .supplier .clients-row .client {
+.hero, .supplier .clients-row .client, .contact-form form {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
@@ -473,19 +473,19 @@ p {
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap; }
 
-ul, .philosophy .principles-row, .services .services-row {
+ul, .philosophy .principles-row, .services .services-row, .products {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap; }
 
-.hero, .supplier .clients-row .client {
+.hero, .supplier .clients-row .client, .contact-form form {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap; }
 
-.hero, .supplier .clients-row .client {
+.hero, .supplier .clients-row .client, .contact-form form {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
@@ -502,6 +502,12 @@ nav {
     background-position: center bottom; }
   to {
     background-position: center top; } }
+
+@keyframes shake {
+  from {
+    transform: translateX(5%); }
+  to {
+    transform: translateX(0); } }
 
 .home-carousel div a, .contact-us a {
   background: #C3272B;
@@ -631,6 +637,8 @@ nav {
   background-attachment: fixed;
   animation: 45s bg-slide-up infinite alternate linear;
   text-align: center; }
+  .services h1, .services h3 {
+    color: #C3272B; }
   @media all and (max-width: 600px) {
     .services {
       padding: 50px 0; }
@@ -663,7 +671,9 @@ nav {
     @media all and (max-width: 600px) {
       .musashi-story .story-row {
         -ms-flex-flow: column wrap;
-        flex-flow: column wrap; } }
+        flex-flow: column wrap; }
+        .musashi-story .story-row .musashi-picture {
+          display: none; } }
   .musashi-story .story-text, .musashi-story .musashi-picture {
     -ms-flex: 1;
     flex: 1; }
@@ -725,3 +735,68 @@ footer {
     font-size: 1.5em; }
     footer .social-media i {
       padding: 0 15px; }
+
+.contact-form {
+  padding: 100px 0;
+  text-align: center;
+  color: #FFF; }
+  .contact-form form input {
+    border: 1px solid #C3272B;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(248, 103, 79, 0.3);
+    padding: 8px 13px;
+    margin: 8px; }
+    .contact-form form input:focus {
+      outline: none;
+      box-shadow: 0 1px 1px #C3272B; }
+  .contact-form form textarea {
+    resize: none;
+    margin: 5px; }
+  .contact-form button {
+    border: none;
+    background: #C3272B;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px 18px;
+    text-transform: uppercase;
+    transition: 0.5s all cubic-bezier(0.9, 0.8, 0.6, 0.2);
+    color: #FFF;
+    border-radius: 15px;
+    padding: 10px 25px;
+    margin: 10px 0;
+    box-shadow: none; }
+    .contact-form button:focus {
+      outline: none; }
+    .contact-form button:hover {
+      background: #440e0f;
+      color: #C3272B; }
+
+.form-shake {
+  animation: 0.1s shake linear alternate 5; }
+
+.contact {
+  background: url("../../images/caligraphy.jpg") no-repeat center top/cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); }
+
+.shop-wrap {
+  background: url("../../images/caligraphy.jpg") no-repeat center top/cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  color: #FFF; }
+
+.shop {
+  padding: 200px 0; }
+
+.products .product {
+  -ms-flex: 1 1 25%;
+  flex: 1 1 25%;
+  margin: 10px; }
+  @media all and (max-width: 800px) {
+    .products .product {
+      -ms-flex: 1 1 35%;
+      flex: 1 1 35%; } }
+  @media all and (max-width: 500px) {
+    .products .product {
+      -ms-flex: 1 2 50%;
+      flex: 1 2 50%; } }
+  .products .product img {
+    width: 100%; }

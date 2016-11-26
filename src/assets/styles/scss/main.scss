@@ -11,6 +11,17 @@
   }
 }
 
+@keyframes shake {
+  from {
+    transform: translateX(5%);
+  }
+  
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 %musashi-link {
   background: $orange-500;
   color: $white-500;
@@ -179,6 +190,9 @@ nav {
   background-attachment: fixed;
   animation: 45s bg-slide-up infinite alternate linear;
   text-align: center;
+  h1,h3 {
+    color: $orange-500;
+  }
 
   @media all and(max-width: 600px) {
       padding: 50px 0;
@@ -226,6 +240,9 @@ nav {
     justify-content: center;
     @media all and(max-width: 600px) {
       flex-flow: column wrap;
+      .musashi-picture {
+        display: none;
+      }
     }
   }
   .story-text,.musashi-picture {
@@ -309,6 +326,73 @@ footer {
 
     i {
       padding: 0 15px;
+    }
+  }
+}
+
+.contact-form {
+  padding: 100px 0;
+  text-align: center;
+  color: $white-500;
+
+
+  form {
+    @extend %flex-col-center;
+
+    
+    input {
+      @include standartInput($orange-500,$orange-300);
+      margin: 8px;
+    }
+    textarea {
+      resize: none;
+      margin: 5px;
+    }
+  }
+
+  button {
+    @include btn-default($orange-500);
+    color: $white-500;
+    border-radius: 15px;
+    padding: 10px 25px;
+    margin: 10px 0;
+    box-shadow: none;
+  }
+}
+
+.form-shake {
+  animation: 0.1s shake linear alternate 5;
+}
+
+.contact {
+  @include backgroundImg('../../images/caligraphy.jpg');
+  @include overlay($black-500,.5);
+}
+
+.shop-wrap {
+  @include backgroundImg('../../images/caligraphy.jpg');
+  @include overlay($black-500,.5);
+  color: $white-500;
+}
+
+.shop {
+  padding: 200px 0;
+}
+.products {
+  
+  @extend %flex-row-wrap;
+
+  .product {
+    flex: 1 1 25%;
+    @media all and (max-width:800px) {
+      flex: 1 1 35%;
+    }
+    @media all and (max-width:500px) {
+      flex: 1 2 50%;
+    }
+    margin: 10px;
+    img {
+      width: 100%;
     }
   }
 }
