@@ -384,6 +384,13 @@ footer {
 
   .product {
     flex: 1 1 25%;
+
+    &:hover {
+      img{
+        outline-color: $orange-500;
+      }
+      
+    }
     @media all and (max-width:800px) {
       flex: 1 1 35%;
     }
@@ -392,7 +399,9 @@ footer {
     }
     margin: 10px;
     img {
+      transition: 300ms all ease-in-out;
       width: 100%;
+      outline: 3px solid  transparent;
     }
   }
 }

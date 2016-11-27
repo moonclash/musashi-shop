@@ -28,9 +28,11 @@ $(document).ready(function(){
     e.preventDefault();
     var phoneValue = $('input[type="number"]').val(); 
     if (phoneValue.match(phoneRegex) && $('input').val().length > 0) {
-      $('form').submit().animate({opacity: 0});
+      $('.contact-form h1,.contact-form h3').fadeOut(500);
+      $('form').before('<h1> Thank you </h1>');
+      $('form').animate({opacity: 0});
     }else {
       $('form').toggleClass('form-shake');
     }
-  })
+  });
 });

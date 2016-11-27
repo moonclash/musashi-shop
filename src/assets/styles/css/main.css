@@ -790,6 +790,8 @@ footer {
   -ms-flex: 1 1 25%;
   flex: 1 1 25%;
   margin: 10px; }
+  .products .product:hover img {
+    outline-color: #C3272B; }
   @media all and (max-width: 800px) {
     .products .product {
       -ms-flex: 1 1 35%;
@@ -799,4 +801,6 @@ footer {
       -ms-flex: 1 2 50%;
       flex: 1 2 50%; } }
   .products .product img {
-    width: 100%; }
+    transition: 300ms all ease-in-out;
+    width: 100%;
+    outline: 3px solid  transparent; }
